@@ -1,0 +1,74 @@
+{
+    "toast-load": {
+        "prefix": "toast-load",
+        "body": [
+            "openToastLoad:function(){", 
+                "this.fire('toast',{status:'load'});", 
+            "}"
+        ],
+        "description": "toast load"
+    },
+    "toast-success": {
+        "prefix": "toast-success",
+        "body": [
+                "openToastStatus:function(){",
+                    "this.fire('toast',{status:'success',text:'บันทึกสำเร็จ',",
+                    "  callback:function(){",
+                    "  }",
+                " });",
+            " }"
+        ],
+        "description": "toast success"
+    },
+     "toast-connectError": {
+        "prefix": "toast-connectError",
+        "body": [
+               "openToastErrorConenct:function(){",
+               " this.fire('toast',{status:'connectError',text:'Error code 404 not found',", 
+               " callback:function(){",
+               " }})",
+            "}"
+        ],
+        "description": "toast connectError"
+    },
+    "toast-dialog": {
+        "prefix": "toast-dialog",
+        "body": [
+                "openToastDialog:function(){",
+                "console.log('openDialog');",
+                "this.fire('toast',{ ",
+                   " status:'dialog',",
+                   " text:'ต้องการลบข้อมูลใช่หรือไม่ ?',",
+                   " confirmed:this._deleteData, ",
+                   " el: this, ",
+                   " data:'' ",
+               " })",
+           " }"
+        ],
+        "description": "toast dialog"
+    },
+     "axios": {
+        "prefix": "axios",
+        "body": [
+                "axios.${1:event}('${2:link}',{",
+                  "params:{}",
+                "})",
+                  ".then((response)=>{",
+                      "console.log('success!!');",
+                      "console.log(response.data);",
+                  "})",
+                  ".catch((error)=>{",
+                      "console.log('error');",
+                      "console.log(error);",
+                  "});",
+              "}"
+        ],
+        "description": "axios"
+    }
+    
+}
+
+
+  
+
+
